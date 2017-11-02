@@ -31,7 +31,7 @@ public class Pigeon : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Cloud") && !bounceCooldownActive)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Cloud") && !bounceCooldownActive)
         {
             rb.AddForce(Vector2.up * BounceForce, ForceMode2D.Impulse);
             StartCoroutine(WaitForJumpCooldown());
@@ -39,7 +39,7 @@ public class Pigeon : MonoBehaviour
 
             anim.SetTrigger("PlayerHitsObject");
 
-            
+
 
             clone = Instantiate(featherParticleObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 
@@ -47,6 +47,7 @@ public class Pigeon : MonoBehaviour
 
             //  collision.gameObject.GetComponent<AnimationCloud>().anim.SetTrigger("PigeonHitsCloud");
         }
+        
        
     }
 
