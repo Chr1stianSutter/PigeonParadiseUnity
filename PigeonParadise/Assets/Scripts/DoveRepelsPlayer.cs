@@ -29,10 +29,13 @@ public class DoveRepelsPlayer : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        ///*
+
+
+
+        
         if (other.gameObject.name == "Pigeon")
         {
-            //  Debug.Log("test");
+            
 
           
 
@@ -41,9 +44,9 @@ public class DoveRepelsPlayer : MonoBehaviour {
            
 
             pigeonObject.GetComponent<Rigidbody2D>().AddForce(-force * multiplicator);
-          //  Debug.Log(force);
+          
         }
-       // */
+       
 
         if (other.gameObject.name == "Dove")
         {
@@ -52,27 +55,23 @@ public class DoveRepelsPlayer : MonoBehaviour {
             StartCoroutine(SetDoveHitVariable());
 
 
-///*
+
             force = pigeonObject.transform.position - other.transform.position;
-           // Debug.Log(force);
-            //force = -1 * force.normalized;
-            
+          
 
             pigeonObject.GetComponent<Rigidbody2D>().AddForce(force.normalized * multiplicator);
-            //Debug.Log(force * multiplicator);
-          //  */
+        
         }
 
+    
+
+
+     //   pigeonObject.transform.position = Vector3.Reflect(doveObject.transform.position, Vector3.right );
+
     }
-    /* 
-    public void OnTriggerEnter2D(Collider2D other) {
-         force = transform.position - other.transform.position;
+    
 
-         force.Normalize();
-         GetComponent<Rigidbody2D>().AddForce(-force * multiplicator);
-     }
-
-  */
+       
 
     public IEnumerator SetDoveHitVariable() {
 

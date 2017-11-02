@@ -5,19 +5,23 @@ using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour {
 
-   
-    public Image progressIcon;
+
+    //public Image progressIcon;
+    public GameObject progressIcon;
     private float barProgress;
+    
     public GameObject startPoint;
     public GameObject endPoint;
     public Transform playerPosition;
     private float totalDistance;
     private float playerDistance;
     private float playerProgress;
+    private float width;
 
 
 	// Use this for initialization
 	void Start () {
+       // width = this.GetComponent<CanvasRenderer>().bounds.size.x;
 	}
 	
 	// Update is called once per frame
@@ -29,8 +33,9 @@ public class ProgressBar : MonoBehaviour {
        // Debug.Log(playerDistance);
         playerProgress = playerDistance / totalDistance * 100;
         //Debug.Log(playerProgress);
-        barProgress = playerProgress / 100 * 732.1f;
-        //progressIcon.transform.position = new Vector3( barProgress, progressIcon.transform.position.y, progressIcon.transform.position.z);
+        barProgress = playerProgress / 100 * 615;
+        //Debug.Log(barProgress);
+        progressIcon.transform.position = new Vector3( barProgress +205, progressIcon.transform.position.y, progressIcon.transform.position.z);
 
 	}
 }

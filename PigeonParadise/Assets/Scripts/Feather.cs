@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Feather : MonoBehaviour
 {
@@ -8,8 +9,17 @@ public class Feather : MonoBehaviour
     public GameObject featherPickupGlow;
     private GameObject clone;
     public Animator anima;
+
+    public Image firstFeather;
+    public Image secondFeather;
+    public Image thirdFeather;
+
     //public GameObject pickupAnimationObject;
     void Start() {
+        firstFeather.enabled = false;
+        secondFeather.enabled = false;
+        thirdFeather.enabled = false;
+
         GameObject thePigeon = GameObject.Find("Pigeon");
         pigeonScript = thePigeon.GetComponent<Pigeon>();
     }
@@ -26,7 +36,7 @@ public class Feather : MonoBehaviour
  
             pigeon.NumFeathers++;
             gameObject.SetActive(false);
-
+            Debug.Log(pigeonScript.NumFeathers);
             clone = Instantiate(featherPickupGlow, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 
             Destroy(clone, 2f);
@@ -40,36 +50,32 @@ public class Feather : MonoBehaviour
     
 
     void Update() {
-        /*
+        
         if (pigeonScript.NumFeathers == 1) {
-            GameObject firstFeather = GameObject.Find("FeatherIcon1");
-            firstFeather.GetComponent<SpriteRenderer>().color = new Color32(248, 249, 169, 255);
+            GameObject firstFeather = GameObject.Find("FirstFeather");
+            firstFeather.SetActive(true);
+            
         }
 
         else if (pigeonScript.NumFeathers == 2)
         {
-            GameObject firstFeather = GameObject.Find("FeatherIcon1");
-            firstFeather.GetComponent<SpriteRenderer>().color = new Color32(248, 249, 169, 255);
 
-            GameObject secondFeather = GameObject.Find("FeatherIcon2");
-            secondFeather.GetComponent<SpriteRenderer>().color = new Color32(248, 249, 169, 255);
-         
+            firstFeather.enabled = true;
+            secondFeather.enabled = true;
+
         }
 
         else if (pigeonScript.NumFeathers == 3)
         {
 
-            GameObject firstFeather = GameObject.Find("FeatherIcon1");
-            firstFeather.GetComponent<SpriteRenderer>().color = new Color32(248, 249, 169, 255);
 
-            GameObject secondFeather = GameObject.Find("FeatherIcon2");
-            secondFeather.GetComponent<SpriteRenderer>().color = new Color32(248, 249, 169, 255);
 
-            GameObject thirdFeather = GameObject.Find("FeatherIcon3");
-            thirdFeather.GetComponent<SpriteRenderer>().color = new Color32(248, 249, 169, 255);
+            firstFeather.enabled = true;
+            secondFeather.enabled = true;
+            thirdFeather.enabled = true;
         }
 
-    */
+    
     }
 
 }
