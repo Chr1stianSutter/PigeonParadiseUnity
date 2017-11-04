@@ -17,6 +17,7 @@ public class ProgressBar : MonoBehaviour {
     private float playerDistance;
     private float playerProgress;
     private float width;
+    public float offset;
 
 
 	// Use this for initialization
@@ -35,7 +36,7 @@ public class ProgressBar : MonoBehaviour {
         //Debug.Log(playerProgress);
         barProgress = playerProgress / 100 * 435;
         //Debug.Log(barProgress);
-        progressIcon.transform.position = new Vector3(barProgress +267, progressIcon.transform.position.y, progressIcon.transform.position.z);
+        progressIcon.transform.position = new Vector3(barProgress + offset, progressIcon.transform.position.y, progressIcon.transform.position.z);
 
 	}
 }

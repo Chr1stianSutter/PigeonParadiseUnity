@@ -25,6 +25,8 @@ public class Feather : MonoBehaviour
     public GameObject firstParticleGlow;
     public GameObject secondParticleGlow;
     public GameObject thirdParticleGlow;
+    public GameObject glowTarget;
+    public float speed;
 
     //public GameObject canvas;
 
@@ -67,6 +69,9 @@ public class Feather : MonoBehaviour
             firstFeather.SetActive(true);
             firstParticleGlow.SetActive(true);
 
+            float step = Time.deltaTime * speed;
+           // this.transform.position = Vector3.MoveTowards(this.transform.position, glowTarget.transform.position, step);
+          //  StartCoroutine(Wait());
             gameObject.SetActive(false);
            
         }
@@ -87,6 +92,10 @@ public class Feather : MonoBehaviour
         }
 
     
+    }
+
+    private IEnumerator Wait() {
+        yield return new WaitForSeconds(3);
     }
 
 }

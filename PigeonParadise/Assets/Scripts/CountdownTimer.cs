@@ -9,7 +9,7 @@ public class CountdownTimer : MonoBehaviour {
     public Text text;
     public AudioSource Src;
     private bool hasPlayed;
-    private bool useTimer;
+    public bool useTimer;
 
 	// Use this for initialization
 	void Start () {

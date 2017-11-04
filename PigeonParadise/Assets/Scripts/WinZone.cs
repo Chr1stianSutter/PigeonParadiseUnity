@@ -20,6 +20,7 @@ public class WinZone : MonoBehaviour
 
     private bool doIt;
     private bool pointSet;
+    public CountdownTimer timerScript;
 
     void Start() {
 
@@ -29,8 +30,9 @@ public class WinZone : MonoBehaviour
         GameObject thePigeon = GameObject.Find("Pigeon");
         pigeonScript = thePigeon.GetComponent<Pigeon>();
 
-       
-        
+        GameObject theTimerObject = GameObject.Find("TimerObject");
+        timerScript = theTimerObject.GetComponent<CountdownTimer>();
+
 
         doIt = false;
         pointSet = false;
@@ -78,7 +80,7 @@ public class WinZone : MonoBehaviour
             // SceneManager.LoadScene(0);
 
             pigeonScript.controlsEnabled = false;
-
+            timerScript.useTimer = false;
             if (pointSet == false)
             {
 
