@@ -25,7 +25,7 @@ public class Feather : MonoBehaviour
     public GameObject firstParticleGlow;
     public GameObject secondParticleGlow;
     public GameObject thirdParticleGlow;
-    public GameObject glowTarget;
+    //public GameObject glowTarget;
     public float speed;
 
     //public GameObject canvas;
@@ -38,31 +38,11 @@ public class Feather : MonoBehaviour
         pigeonScript = thePigeon.GetComponent<Pigeon>();
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        Pigeon pigeon = collision.GetComponent<Pigeon>();
-        if(pigeon != null)
-        {
- 
-
-            anima.SetTrigger("PlayerHitsFeather");
-
- 
-            pigeonScript.NumFeathers++;
-          
-            clone = Instantiate(featherPickupGlow, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
-
-
-            Destroy(clone, 2f);
-         
-        }
-
-    }
+   
     
 
     void Update() {
 
-    
 
         if (pigeonScript.NumFeathers == 1) {
             //Debug.Log(pigeonScript.NumFeathers);
@@ -73,28 +53,29 @@ public class Feather : MonoBehaviour
 //float step = Time.deltaTime * speed;
            // this.transform.position = Vector3.MoveTowards(this.transform.position, glowTarget.transform.position, step);
           //  StartCoroutine(Wait());
-            gameObject.SetActive(false);
+          //  gameObject.SetActive(false);
            
         }
 
-        else if (pigeonScript.NumFeathers == 2)
+         if (pigeonScript.NumFeathers == 2)
         {
             secondFeather.SetActive(true);
-            gameObject.SetActive(false);
+            Debug.Log("test");
+          //  gameObject.SetActive(false);
             secondParticleGlow.SetActive(true);
         }
 
-        else if (pigeonScript.NumFeathers == 3)
+         if (pigeonScript.NumFeathers == 3)
         {
             thirdFeather.SetActive(true);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             thirdParticleGlow.SetActive(true);
 
         }
 
-    
+      
     }
-
+  
     private IEnumerator Wait() {
         yield return new WaitForSeconds(3);
     }

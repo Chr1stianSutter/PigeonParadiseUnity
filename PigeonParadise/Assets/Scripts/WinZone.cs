@@ -120,6 +120,6 @@ public class WinZone : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1 );
     }
 }

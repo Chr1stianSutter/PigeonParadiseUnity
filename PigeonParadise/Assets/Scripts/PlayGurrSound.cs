@@ -97,7 +97,7 @@ public class PlayGurrSound : MonoBehaviour
 
                 else if (gameControllerScript.maxFeathers == 2 && pigeonScript.NumFeathers == 1)
                 {
-                    clone = Instantiate(firstRedGlow, new Vector3(firstFeather.transform.position.x - offestHorizontal, firstFeather.transform.position.y + offsetVertical, firstFeather.transform.position.z), Quaternion.identity);
+                    clone = Instantiate(firstRedGlow, new Vector3(secondFeather.transform.position.x - offestHorizontal, secondFeather.transform.position.y + offsetVertical, secondFeather.transform.position.z), Quaternion.identity);
                     clone.transform.SetParent(canvas.transform);
                     //Debug.Log("test");
                     cloneSpawned = true;

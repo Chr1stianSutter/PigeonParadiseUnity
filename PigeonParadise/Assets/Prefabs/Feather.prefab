@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114901892640204478}
   m_Layer: 0
   m_Name: Feather
-  m_TagString: Untagged
+  m_TagString: Feather
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1791508337497086}
   m_LocalRotation: {x: -0, y: -0, z: 0.14473264, w: 0.98947084}
-  m_LocalPosition: {x: 9.651, y: -3.025, z: 0}
+  m_LocalPosition: {x: 9.651, y: -2.81, z: 0}
   m_LocalScale: {x: 0.25327802, y: 0.25327808, z: 0.25327808}
   m_Children:
   - {fileID: 4368047573018940}
@@ -233,6 +233,10 @@ MonoBehaviour:
   firstFeather: {fileID: 0}
   secondFeather: {fileID: 0}
   thirdFeather: {fileID: 0}
+  firstParticleGlow: {fileID: 0}
+  secondParticleGlow: {fileID: 0}
+  thirdParticleGlow: {fileID: 0}
+  speed: 3
 --- !u!114 &114901892640204478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,8 +248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c820f5ddc5fb5b140b0164958557d7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  offset: 0.3
+  speed: 0.8
+  offset: 0.4
 --- !u!198 &198494464083151944
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -305,7 +309,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1235535294
+  randomSeed: 1422756263
   InitialModule:
     serializedVersion: 3
     enabled: 1
