@@ -12,21 +12,25 @@ public class Pigeon : MonoBehaviour
 
     public int NumFeathers { get; set; }
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public bool bounceCooldownActive = false;
     public GameObject featherParticleObject;
     private GameObject clone;
+    public bool controlsEnabled;
 
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playJumpSoundScript = this.GetComponent<PlayJumpSound>();
+        controlsEnabled = true;
     }
 
     public void FixedUpdate()
     {
+        if (controlsEnabled == true) { 
         float movement = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(movement * Speed, rb.velocity.y);
+    }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

@@ -19,15 +19,19 @@ public class Feather : MonoBehaviour
     public Image thirdFeatherDeactivated;
 
     public GameObject firstFeather;
-    public Image secondFeather;
-    public Image thirdFeather;
+    public GameObject secondFeather;
+    public GameObject thirdFeather;
+
+    public GameObject firstParticleGlow;
+    public GameObject secondParticleGlow;
+    public GameObject thirdParticleGlow;
 
     //public GameObject canvas;
 
     //public GameObject pickupAnimationObject;
     void Start() {
-     
 
+        firstParticleGlow.SetActive(false);
         GameObject thePigeon = GameObject.Find("Pigeon");
         pigeonScript = thePigeon.GetComponent<Pigeon>();
     }
@@ -43,12 +47,11 @@ public class Feather : MonoBehaviour
 
  
             pigeonScript.NumFeathers++;
-           // gameObject.SetActive(false);
-          //  Debug.Log(pigeonScript.NumFeathers);
+          
             clone = Instantiate(featherPickupGlow, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 
             Destroy(clone, 2f);
-          //  Debug.Log(pigeonScript.NumFeathers);
+         
         }
 
     }
@@ -56,40 +59,31 @@ public class Feather : MonoBehaviour
 
     void Update() {
 
-       // if (pigeonScript.NumFeathers == 0) { Debug.Log("test"); }
- //Debug.Log(pigeonScript.NumFeathers);
+    
 
         if (pigeonScript.NumFeathers == 1) {
-            Debug.Log(pigeonScript.NumFeathers);
+            //Debug.Log(pigeonScript.NumFeathers);
+
+            firstFeather.SetActive(true);
+            firstParticleGlow.SetActive(true);
+
             gameObject.SetActive(false);
-            // GameObject firstFeather = GameObject.Find("FirstFeather");
-             firstFeather.SetActive(true);
-            // Instantiate(featherUI, new Vector2 (firstFeatherDeactivated.transform.position.x, firstFeatherDeactivated.transform.position.y), Quaternion.identity);
-            //featherUI.transform.SetParent(canvas.transform, false);
+           
         }
 
         else if (pigeonScript.NumFeathers == 2)
         {
+            secondFeather.SetActive(true);
             gameObject.SetActive(false);
-            // Instantiate(featherUI, new Vector2(firstFeatherDeactivated.transform.position.x, firstFeatherDeactivated.transform.position.y), Quaternion.identity);
-            // featherUI.transform.SetParent(canvas.transform, false);
-
-            //Instantiate(featherUI, new Vector2(secondFeatherDeactivated.transform.position.x, secondFeatherDeactivated.transform.position.y), Quaternion.identity);
-            // featherUI.transform.SetParent(canvas.transform, false);
+            secondParticleGlow.SetActive(true);
         }
 
         else if (pigeonScript.NumFeathers == 3)
         {
-
+            thirdFeather.SetActive(true);
             gameObject.SetActive(false);
-            // Instantiate(featherUI, new Vector2(firstFeatherDeactivated.transform.position.x, firstFeatherDeactivated.transform.position.y), Quaternion.identity);
-            // featherUI.transform.SetParent(canvas.transform, false);
+            thirdParticleGlow.SetActive(true);
 
-            // Instantiate(featherUI, new Vector2(secondFeatherDeactivated.transform.position.x, secondFeatherDeactivated.transform.position.y), Quaternion.identity);
-            // featherUI.transform.SetParent(canvas.transform, false);
-
-            // Instantiate(featherUI, new Vector2(thirdFeatherDeactivated.transform.position.x, thirdFeatherDeactivated.transform.position.y), Quaternion.identity);
-            // featherUI.transform.SetParent(canvas.transform, false);
         }
 
     

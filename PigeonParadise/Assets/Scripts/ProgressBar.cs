@@ -33,9 +33,9 @@ public class ProgressBar : MonoBehaviour {
        // Debug.Log(playerDistance);
         playerProgress = playerDistance / totalDistance * 100;
         //Debug.Log(playerProgress);
-        barProgress = playerProgress / 100 * 615;
+        barProgress = playerProgress / 100 * 435;
         //Debug.Log(barProgress);
-        progressIcon.transform.position = new Vector3( barProgress +400, progressIcon.transform.position.y, progressIcon.transform.position.z);
+        progressIcon.transform.position = new Vector3(barProgress +267, progressIcon.transform.position.y, progressIcon.transform.position.z);
 
 	}
 }

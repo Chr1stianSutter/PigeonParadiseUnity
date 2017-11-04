@@ -77,7 +77,7 @@ public class DoveRepelsPlayer : MonoBehaviour {
 
         doveHit = true;
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
 
         doveHit = false;
         screenshakeScript.shakeDuration = 0.3f;

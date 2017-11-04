@@ -22,9 +22,7 @@ GameObject:
   - component: {fileID: 212456189941764952}
   - component: {fileID: 198702444348846664}
   - component: {fileID: 199442859807255468}
-  - component: {fileID: 114487898631123618}
   - component: {fileID: 60666250017744274}
-  - component: {fileID: 114120285578294328}
   - component: {fileID: 222758420886458322}
   m_Layer: 5
   m_Name: GlowParticles
@@ -57,8 +55,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1271478466575862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.7, y: 1.1, z: 0}
-  m_LocalScale: {x: 0.25065687, y: 0.250657, z: 0.250657}
+  m_LocalPosition: {x: -342, y: 159, z: -4401}
+  m_LocalScale: {x: 0.253278, y: 0.25327808, z: 0.25327808}
   m_Children:
   - {fileID: 4306328910705908}
   m_Father: {fileID: 0}
@@ -211,42 +209,6 @@ PolygonCollider2D:
       - {x: -2.19, y: -2.32}
       - {x: -2.18, y: -2.18}
       - {x: -2.1399999, y: -1.9499999}
---- !u!114 &114120285578294328
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1271478466575862}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c820f5ddc5fb5b140b0164958557d7d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  offset: 0.3
---- !u!114 &114487898631123618
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1271478466575862}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbb60b5263dcc384bbe5a4e4d74cbee3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pigeonScript: {fileID: 0}
-  featherPickupGlow: {fileID: 1540928581559036, guid: 9f97f749789724848a36e487c2766031,
-    type: 2}
-  anima: {fileID: 0}
-  featherUI: {fileID: 114422668227668456, guid: eb7336f3d5360c64aae1fa8a550ac832,
-    type: 2}
-  firstFeatherDeactivated: {fileID: 0}
-  secondFeatherDeactivated: {fileID: 0}
-  thirdFeatherDeactivated: {fileID: 0}
-  firstFeather: {fileID: 0}
-  secondFeather: {fileID: 0}
-  thirdFeather: {fileID: 0}
 --- !u!198 &198702444348846664
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -254,9 +216,9 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1271478466575862}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 2
   simulationSpeed: 1.5
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -306,7 +268,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 29566016
+  randomSeed: -275257850
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -354,7 +316,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 400
+      scalar: 20
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -458,7 +420,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 150
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2

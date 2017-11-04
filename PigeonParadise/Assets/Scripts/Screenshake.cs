@@ -18,7 +18,7 @@ public class Screenshake : MonoBehaviour {
     public float audioMinTime;
     public float audioMaxTime;
     public AudioClip audioClip;
-    private bool hasPlayed;
+    public bool hasPlayed;
     
 
     //  public Pigeon pigeonScript;
@@ -106,7 +106,7 @@ public class Screenshake : MonoBehaviour {
 
     public IEnumerator WaitThenSetHasPlayedFalse() {
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.8f);
 
         hasPlayed = false;
     }
