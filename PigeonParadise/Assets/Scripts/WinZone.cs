@@ -23,6 +23,7 @@ public class WinZone : MonoBehaviour
     public CountdownTimer timerScript;
     public AudioSource winSound;
     public float offset2;
+    public Animator anima;
 
     void Start() {
 
@@ -82,6 +83,7 @@ public class WinZone : MonoBehaviour
             // SceneManager.LoadScene(0);
 
             winSound.Play();
+            anima.SetTrigger("PlayerHitsFeather");
             pigeonScript.controlsEnabled = false;
             timerScript.useTimer = false;
             if (pointSet == false)

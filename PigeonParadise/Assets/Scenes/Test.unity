@@ -270,7 +270,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 2d22c1dc20c64664b9d399f4a73922af, type: 3}
     m_FontSize: 67
     m_FontStyle: 0
     m_BestFit: 0
@@ -4102,6 +4102,7 @@ MonoBehaviour:
   timerScript: {fileID: 87535200}
   winSound: {fileID: 1279487079}
   offset2: 1
+  anima: {fileID: 243005029}
 --- !u!60 &1279487073
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5874,7 +5875,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4900827961618058, guid: 0c2b9847d5867c146957584987fda0ea, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.025
+      value: -2.81
       objectReference: {fileID: 0}
     - target: {fileID: 4900827961618058, guid: 0c2b9847d5867c146957584987fda0ea, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5974,6 +5975,16 @@ Prefab:
         type: 2}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901892640204478, guid: 0c2b9847d5867c146957584987fda0ea,
+        type: 2}
+      propertyPath: speed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901892640204478, guid: 0c2b9847d5867c146957584987fda0ea,
+        type: 2}
+      propertyPath: offset
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c2b9847d5867c146957584987fda0ea, type: 2}

@@ -21,7 +21,7 @@ public class CountdownTimer : MonoBehaviour {
 	void Update () {
         if (useTimer == true) {
             timeLeft -= Time.deltaTime;
-            text.text = "" + Mathf.Round(timeLeft);
+            text.text = "" + Mathf.Round(timeLeft) +"s";
         }
         if (timeLeft <= 0 && !Src.isPlaying) {
 
