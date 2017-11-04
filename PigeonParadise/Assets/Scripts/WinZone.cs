@@ -21,6 +21,8 @@ public class WinZone : MonoBehaviour
     private bool doIt;
     private bool pointSet;
     public CountdownTimer timerScript;
+    public AudioSource winSound;
+    public float offset2;
 
     void Start() {
 
@@ -79,6 +81,7 @@ public class WinZone : MonoBehaviour
         {
             // SceneManager.LoadScene(0);
 
+            winSound.Play();
             pigeonScript.controlsEnabled = false;
             timerScript.useTimer = false;
             if (pointSet == false)
@@ -91,7 +94,7 @@ public class WinZone : MonoBehaviour
             Debug.Log(pigeonScript.transform.position);
             Debug.Log(pointA);
 
-            clone = Instantiate(featherPickupGlow, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            clone = Instantiate(featherPickupGlow, new Vector3(transform.position.x - offset2, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(clone, .8f);
 
             Time.timeScale = 0.2f;

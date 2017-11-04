@@ -52,6 +52,7 @@ public class Feather : MonoBehaviour
           
             clone = Instantiate(featherPickupGlow, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 
+
             Destroy(clone, 2f);
          
         }
@@ -69,7 +70,7 @@ public class Feather : MonoBehaviour
             firstFeather.SetActive(true);
             firstParticleGlow.SetActive(true);
 
-            float step = Time.deltaTime * speed;
+//float step = Time.deltaTime * speed;
            // this.transform.position = Vector3.MoveTowards(this.transform.position, glowTarget.transform.position, step);
           //  StartCoroutine(Wait());
             gameObject.SetActive(false);
