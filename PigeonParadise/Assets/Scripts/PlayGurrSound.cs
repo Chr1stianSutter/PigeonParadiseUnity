@@ -80,80 +80,95 @@ public class PlayGurrSound : MonoBehaviour
 
                 else if (gameControllerScript.maxFeathers == 2 && pigeonScript.NumFeathers == 0)
                 {
-                    clone = Instantiate(firstRedGlow, new Vector3(firstFeather.transform.position.x - offestHorizontal, firstFeather.transform.position.y + offsetVertical, firstFeather.transform.position.z), Quaternion.identity);
-                    clone.transform.SetParent(canvas.transform);
-                    //Debug.Log("test");
-                    cloneSpawned = true;
-                    Destroy(clone, 2f);
-                    StartCoroutine(Wait());
+                    if (cloneSpawned == false)
+                    {
+                        clone = Instantiate(firstRedGlow, new Vector3(firstFeather.transform.position.x - offestHorizontal, firstFeather.transform.position.y + offsetVertical, firstFeather.transform.position.z), Quaternion.identity);
+                        clone.transform.SetParent(canvas.transform);
+                        //Debug.Log("test");
+                        cloneSpawned = true;
+                        Destroy(clone, 2f);
+                        StartCoroutine(Wait());
 
-                    clone = Instantiate(firstRedGlow, new Vector3(secondFeather.transform.position.x - offestHorizontal, secondFeather.transform.position.y + offsetVertical, secondFeather.transform.position.z), Quaternion.identity);
-                    clone.transform.SetParent(canvas.transform);
-                    //Debug.Log("test");
-                    cloneSpawned = true;
-                    Destroy(clone, 2f);
-                    StartCoroutine(Wait());
+                        clone = Instantiate(firstRedGlow, new Vector3(secondFeather.transform.position.x - offestHorizontal, secondFeather.transform.position.y + offsetVertical, secondFeather.transform.position.z), Quaternion.identity);
+                        clone.transform.SetParent(canvas.transform);
+                        //Debug.Log("test");
+                        cloneSpawned = true;
+                        Destroy(clone, 2f);
+                        StartCoroutine(Wait());
+                    }
                 }
 
                 else if (gameControllerScript.maxFeathers == 2 && pigeonScript.NumFeathers == 1)
                 {
-                    clone = Instantiate(firstRedGlow, new Vector3(secondFeather.transform.position.x - offestHorizontal, secondFeather.transform.position.y + offsetVertical, secondFeather.transform.position.z), Quaternion.identity);
-                    clone.transform.SetParent(canvas.transform);
-                    //Debug.Log("test");
-                    cloneSpawned = true;
-                    Destroy(clone, 2f);
-                    StartCoroutine(Wait());
+                    if (cloneSpawned == false)
+                    {
+                        clone = Instantiate(firstRedGlow, new Vector3(secondFeather.transform.position.x - offestHorizontal, secondFeather.transform.position.y + offsetVertical, secondFeather.transform.position.z), Quaternion.identity);
+                        clone.transform.SetParent(canvas.transform);
+                        //Debug.Log("test");
+                        cloneSpawned = true;
+                        Destroy(clone, 2f);
+                        StartCoroutine(Wait());
+                    }
                 }
 
                 else if (gameControllerScript.maxFeathers == 3 && pigeonScript.NumFeathers == 0)
                 {
-                    clone = Instantiate(firstRedGlow, new Vector3(firstFeather.transform.position.x - offestHorizontal, firstFeather.transform.position.y + offsetVertical, firstFeather.transform.position.z), Quaternion.identity);
-                    clone.transform.SetParent(canvas.transform);
-                    //Debug.Log("test");
-                    cloneSpawned = true;
-                    Destroy(clone, 2f);
-                    StartCoroutine(Wait());
+                    if (cloneSpawned == false)
+                    {
+                        clone = Instantiate(firstRedGlow, new Vector3(firstFeather.transform.position.x - offestHorizontal, firstFeather.transform.position.y + offsetVertical, firstFeather.transform.position.z), Quaternion.identity);
+                        clone.transform.SetParent(canvas.transform);
+                        //Debug.Log("test");
+                        cloneSpawned = true;
+                        Destroy(clone, 2f);
+                        StartCoroutine(Wait());
 
-                    clone = Instantiate(firstRedGlow, new Vector3(secondFeather.transform.position.x - offestHorizontal, secondFeather.transform.position.y + offsetVertical, secondFeather.transform.position.z), Quaternion.identity);
-                    clone.transform.SetParent(canvas.transform);
-                    //Debug.Log("test");
-                    cloneSpawned = true;
-                    Destroy(clone, 2f);
-                    StartCoroutine(Wait());
+                        clone = Instantiate(firstRedGlow, new Vector3(secondFeather.transform.position.x - offestHorizontal, secondFeather.transform.position.y + offsetVertical, secondFeather.transform.position.z), Quaternion.identity);
+                        clone.transform.SetParent(canvas.transform);
+                        //Debug.Log("test");
+                        cloneSpawned = true;
+                        Destroy(clone, 2f);
+                        StartCoroutine(Wait());
 
-                    clone = Instantiate(firstRedGlow, new Vector3(thirdFeather.transform.position.x - offestHorizontal, thirdFeather.transform.position.y + offsetVertical, thirdFeather.transform.position.z), Quaternion.identity);
-                    clone.transform.SetParent(canvas.transform);
-                    //Debug.Log("test");
-                    cloneSpawned = true;
-                    Destroy(clone, 2f);
-                    StartCoroutine(Wait());
+                        clone = Instantiate(firstRedGlow, new Vector3(thirdFeather.transform.position.x - offestHorizontal, thirdFeather.transform.position.y + offsetVertical, thirdFeather.transform.position.z), Quaternion.identity);
+                        clone.transform.SetParent(canvas.transform);
+                        //Debug.Log("test");
+                        cloneSpawned = true;
+                        Destroy(clone, 2f);
+                        StartCoroutine(Wait());
+                    }
                 }
 
                 else if (gameControllerScript.maxFeathers == 3 && pigeonScript.NumFeathers == 1)
                 {
-                    clone = Instantiate(firstRedGlow, new Vector3(firstFeather.transform.position.x - offestHorizontal, firstFeather.transform.position.y + offsetVertical, firstFeather.transform.position.z), Quaternion.identity);
-                    clone.transform.SetParent(canvas.transform);
-                    //Debug.Log("test");
-                    cloneSpawned = true;
-                    Destroy(clone, 2f);
-                    StartCoroutine(Wait());
+                    if (cloneSpawned == false)
+                    {
+                        clone = Instantiate(firstRedGlow, new Vector3(secondFeather.transform.position.x - offestHorizontal, secondFeather.transform.position.y + offsetVertical, secondFeather.transform.position.z), Quaternion.identity);
+                        clone.transform.SetParent(canvas.transform);
+                        //Debug.Log("test");
+                        cloneSpawned = true;
+                        Destroy(clone, 2f);
+                        StartCoroutine(Wait());
 
-                    clone = Instantiate(firstRedGlow, new Vector3(secondFeather.transform.position.x - offestHorizontal, secondFeather.transform.position.y + offsetVertical, secondFeather.transform.position.z), Quaternion.identity);
-                    clone.transform.SetParent(canvas.transform);
-                    //Debug.Log("test");
-                    cloneSpawned = true;
-                    Destroy(clone, 2f);
-                    StartCoroutine(Wait());
+                        clone = Instantiate(firstRedGlow, new Vector3(thirdFeather.transform.position.x - offestHorizontal, thirdFeather.transform.position.y + offsetVertical, thirdFeather.transform.position.z), Quaternion.identity);
+                        clone.transform.SetParent(canvas.transform);
+                        //Debug.Log("test");
+                        cloneSpawned = true;
+                        Destroy(clone, 2f);
+                        StartCoroutine(Wait());
+                    }
                 }
 
                 else if (gameControllerScript.maxFeathers == 3 && pigeonScript.NumFeathers == 2)
                 {
-                    clone = Instantiate(firstRedGlow, new Vector3(firstFeather.transform.position.x - offestHorizontal, firstFeather.transform.position.y + offsetVertical, firstFeather.transform.position.z), Quaternion.identity);
-                    clone.transform.SetParent(canvas.transform);
-                    //Debug.Log("test");
-                    cloneSpawned = true;
-                    Destroy(clone, 2f);
-                    StartCoroutine(Wait());
+                    if (cloneSpawned == false)
+                    {
+                        clone = Instantiate(firstRedGlow, new Vector3(thirdFeather.transform.position.x - offestHorizontal, thirdFeather.transform.position.y + offsetVertical, thirdFeather.transform.position.z), Quaternion.identity);
+                        clone.transform.SetParent(canvas.transform);
+                        //Debug.Log("test");
+                        cloneSpawned = true;
+                        Destroy(clone, 2f);
+                        StartCoroutine(Wait());
+                    }
                 }
             }
             

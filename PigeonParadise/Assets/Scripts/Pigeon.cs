@@ -86,7 +86,7 @@ public class Pigeon : MonoBehaviour
             clone = Instantiate(featherPickupGlow, new Vector3(collision.transform.position.x, collision.transform.position.y, collision.transform.position.z), Quaternion.identity);
             called = true;
 
-            Destroy(clone, 2f);
+            Destroy(clone, 0.8f);
 
             if (NumFeathers == 1)
             {

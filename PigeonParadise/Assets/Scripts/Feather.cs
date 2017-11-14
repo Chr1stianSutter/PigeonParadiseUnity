@@ -60,9 +60,10 @@ public class Feather : MonoBehaviour
          if (pigeonScript.NumFeathers == 2)
         {
             secondFeather.SetActive(true);
-            Debug.Log("test");
+            
           //  gameObject.SetActive(false);
             secondParticleGlow.SetActive(true);
+            Debug.Log("test");
         }
 
          if (pigeonScript.NumFeathers == 3)
