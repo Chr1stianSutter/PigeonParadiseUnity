@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoveMovement : MonoBehaviour {
+public class DoveMovementUpDown : MonoBehaviour {
 
     private bool dirUp = true;
     public float speed = 2.0f;

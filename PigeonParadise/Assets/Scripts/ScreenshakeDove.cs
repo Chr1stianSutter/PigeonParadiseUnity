@@ -72,7 +72,7 @@ public class ScreenshakeDove : MonoBehaviour {
     public IEnumerator WaitThenSetHasPlayedFalse()
     {
 
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1f);
 
         hasPlayed = false;
     }

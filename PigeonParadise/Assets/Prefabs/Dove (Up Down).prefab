@@ -26,9 +26,10 @@ GameObject:
   - component: {fileID: 95375335958297764}
   - component: {fileID: 82549142883642866}
   - component: {fileID: 114696608482463482}
+  - component: {fileID: 114409420763702818}
   m_Layer: 11
-  m_Name: Dove
-  m_TagString: Untagged
+  m_Name: Dove (Up Down)
+  m_TagString: Dove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,6 +220,23 @@ MonoBehaviour:
   shakeAmount: 0.7
   decreaseFactor: 1
   originalPosition: {x: 0, y: 0, z: 0}
+  repelScript: {fileID: 0}
+  Src: {fileID: 82549142883642866}
+  audioMinTime: 3.5
+  audioMaxTime: 4.7
+  audioClip: {fileID: 8300000, guid: 52badac3b0840a645be65b0e37b3b778, type: 3}
+  hasPlayed: 0
+--- !u!114 &114409420763702818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1704339123061652}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f73f22b3f878840a4269d15771f2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   repelScript: {fileID: 0}
   Src: {fileID: 82549142883642866}
   audioMinTime: 3.5

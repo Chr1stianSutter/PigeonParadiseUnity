@@ -48,7 +48,7 @@ public class DoveRepelsPlayer : MonoBehaviour {
         }
        
 
-        if (other.gameObject.name == "Dove")
+        if (other.gameObject.tag == "Dove")
         {
             anim.SetTrigger("PlayerHitsDove");
 

@@ -7,17 +7,20 @@ public class DeathZone : MonoBehaviour
 {
     public AudioSource DeathSound;
     public GameController gameControllerScript;
+    public GameObject pigeonObject;
+    
     void Start() {
         GameObject gameControllerObject = GameObject.Find("GameController");
         gameControllerScript = gameControllerObject.GetComponent<GameController>();
 
-
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
        StartCoroutine (PlayDeathSound());
+        pigeonObject.SetActive(false); 
       
     }
     public IEnumerator PlayDeathSound()

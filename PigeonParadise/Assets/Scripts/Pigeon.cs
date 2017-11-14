@@ -72,7 +72,7 @@ public class Pigeon : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Feather feather = collision.GetComponent<Feather>();
+        //Feather feather = collision.GetComponent<Feather>();
         if (collision.tag == "Feather" && called == false)
         {
 
