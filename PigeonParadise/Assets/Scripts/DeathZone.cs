@@ -28,7 +28,7 @@ public class DeathZone : MonoBehaviour
         gameControllerScript.backgroundMusic.Stop();
 
         DeathSound.Play();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(0);
     }
 }

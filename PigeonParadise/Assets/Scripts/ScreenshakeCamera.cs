@@ -96,9 +96,11 @@ public class ScreenshakeCamera : MonoBehaviour {
                 GameObject thePigeon = GameObject.Find("Pigeon");
                 // repelScript = thePigeon.GetComponent<DoveRepelsPlayer>();
 
-                camTransform.localPosition = new Vector3(thePigeon.transform.position.x, 1, -10);
-                StartCoroutine(WaitThenSetShakeDuration());
-
+                if (thePigeon != null)
+                {
+                    camTransform.localPosition = new Vector3(thePigeon.transform.position.x, 1, -10);
+                    StartCoroutine(WaitThenSetShakeDuration());
+                }
             }
         }
 

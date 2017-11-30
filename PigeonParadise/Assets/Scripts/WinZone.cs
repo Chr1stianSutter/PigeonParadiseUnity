@@ -24,6 +24,8 @@ public class WinZone : MonoBehaviour
     public AudioSource winSound;
     public float offset2;
     public Animator anima;
+    public GameObject winPanel;
+
 
     void Start() {
 
@@ -120,6 +122,14 @@ public class WinZone : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1 );
+        if(SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            winPanel.SetActive(true);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        }
     }
 }

@@ -9,13 +9,14 @@ public class DoveMovementUpDown : MonoBehaviour {
 
     private Vector2 pointA;
     private Vector2 pointB;
-    public float offset;
+    public float offsetUp;
+    public float offsetDown;
 
 
 	// Use this for initialization
 	void Start () {
-        pointA = new Vector3(transform.position.x, transform.position.y + offset, transform.position.z);
-        pointB = new Vector3(transform.position.x, transform.position.y - offset, transform.position.z);
+        pointA = new Vector3(transform.position.x, transform.position.y + offsetUp, transform.position.z);
+        pointB = new Vector3(transform.position.x, transform.position.y - offsetDown, transform.position.z);
 
     }
 
